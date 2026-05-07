@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: rgb(51, 75, 87);
+}
+
+header {
+    background:rgb(51,75,87);
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+header {
+    background: rgb(51,75,87);
+    color: white;
+    padding: 20px;
+    position: fixed;   /* 🔥 hace el menú fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     /* para que quede encima de todo */
+}
+
+/* Evita que el contenido se esconda debajo del menú */
+body {
+    margin: 0;
+    padding-top: 120px; /* ajusta según altura del header */
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+/* efecto elegante al pasar el mouse */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    background: url("img/esewe5.0.jpg") no-repeat center/cover;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* overlay oscuro */
+}
+
+.hero h2 {
+    position: relative;
+    font-size: 42px;
+    padding: 20px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+.section {
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 32px;
+    color: rgb(51,75,87);
+}
+
+/* Tarjetas más elegantes */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width:350PX;
+    height: 300PX;
+    border-radius: 10px;
+}
+
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+form button {
+    background: rgb(51,75,87);
+    color: white;
+    padding: 10px;
+    border: none;
+}
+footer { color: rgb(51,75,87); text-align: center; padding: 20px; }
+
+.footer-container {
+    max-width: absolute ;
+    margin: auto;
+    padding: 40px 20px;
+    color: rgb(51, 75, 87);
+}
+.footer-container p {
+    margin: 10px 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+.slider {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  position: relative; 
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+/* Ajuste de tiempos para 4 imágenes */
+.slider img:nth-child(1) { animation-delay: 0s; }
+.slider img:nth-child(2) { animation-delay: 3s; }
+.slider img:nth-child(3) { animation-delay: 6s; }
+.slider img:nth-child(4) { animation-delay: 9s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+.slider {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
